@@ -1,13 +1,19 @@
 <div class="container" id="main_container">
-<div class="row">
-<div id="main" class="col-md-8">
-    <game-runner></game-runner>
-</div>
-<div id="menu" class="col-md-4">
-    <h1>Game of life</h1>
-    <p>Version 1.0.0 - Non optimized</p>
 
+<header>
+    <div class="row">
+        <div class="col-md-8"><h1>Game of life</h1></div>
+        <div class="col-md-4">
+            <button class="btn default-btn" ng-click="gol('start')">start</button>
+            <button class="btn default-btn" ng-click="gol('stop')">stop</button>
+            <button class="btn default-btn" ng-click="gol('clear')">clear</button>
+            <button class="btn default-btn" ng-click="gol('rand')">refresh</button>
+        </div>
+    </div>
+</header>
+<div id="main">
+    <game-runner state={{start}}></game-runner>
 </div>
-</div>
+
 </div>
 

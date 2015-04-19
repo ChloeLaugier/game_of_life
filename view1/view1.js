@@ -9,6 +9,18 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$scope', function($scope) {
+
+
+      $scope.start = "stop";
+      $scope.startgol = function() {
+        $scope.start = "start";
+      };
+
+      $scope.gol = function(val) {
+        //$scope.swipeTo = swipeTo;
+        $scope.start = val;
+      };
+
 
 }]);
